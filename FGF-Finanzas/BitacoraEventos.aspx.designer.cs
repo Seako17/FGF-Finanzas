@@ -11,97 +11,88 @@ namespace FGF_Finanzas
 {
 
 
-    public partial class Registrarse
+    public partial class BitacoraEventos
     {
 
         /// <summary>
-        /// Control DniUsuario.
+        /// Control GridViewEventos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DniUsuario;
+        protected global::System.Web.UI.WebControls.GridView GridViewEventos;
 
         /// <summary>
-        /// Control Nombre.
+        /// Control nombreUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Nombre;
+        protected global::System.Web.UI.WebControls.TextBox nombreUsuario;
 
         /// <summary>
-        /// Control Apellido.
+        /// Control fechaFiltro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Apellido;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaFiltro;
 
         /// <summary>
-        /// Control Email.
+        /// Control moduloFiltro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Email;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect moduloFiltro;
 
         /// <summary>
-        /// Control UserName.
+        /// Control eventoFiltro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UserName;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect eventoFiltro;
 
         /// <summary>
-        /// Control Password.
+        /// Control criticidadFiltro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Password;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect criticidadFiltro;
 
         /// <summary>
-        /// Control ConfirmPassword.
+        /// Control btnAplicar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ConfirmPassword;
+        protected global::System.Web.UI.WebControls.Button btnAplicar;
 
         /// <summary>
-        /// Control lblError.
+        /// Control btnLimpiar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblError;
+        protected global::System.Web.UI.WebControls.Button btnLimpiar;
 
         /// <summary>
-        /// Control BtnCancelar.
+        /// Control conFecha.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnCancelar;
-
-        /// <summary>
-        /// Control BtnRegistrar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnRegistrar;
+        protected global::System.Web.UI.WebControls.CheckBox conFecha;
     }
 }
