@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,17 +68,68 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Backup-Restore.aspx" />
+    <Content Include="BitacoraEventos.aspx" />
+    <Content Include="Cambiar-Contraseña.aspx" />
+    <Content Include="Content\BackupRestore\clip.png" />
+    <Content Include="Content\BackupRestore\BackupStyles.css" />
+    <Content Include="Content\DV_Styles.css" />
     <Content Include="Content\Estilos.css" />
+    <Content Include="Content\EventosStyles.css" />
+    <Content Include="Content\GestionUsuarios\CambiarContraseñaStyles.css" />
+    <Content Include="Content\GestionUsuarios\GestionUsuariosStyles.css" />
+    <Content Include="Content\Login\ojoAbierto.png" />
+    <Content Include="Content\Login\ojoCerrado.png" />
+    <Content Include="Content\Login\LoginStyles.css" />
+    <Content Include="Content\logoVitalPet.png" />
+    <Content Include="Content\registrarMascotasStyles.css" />
+    <Content Include="Content\RegistrarStyles.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Gestion-Usuarios.aspx" />
+    <Content Include="DV_Form.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
+    <Content Include="RegistrarMascotas.aspx" />
     <Content Include="Registrarse.aspx" />
+    <Content Include="Scripts\scripts.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Backup-Restore.aspx.cs">
+      <DependentUpon>Backup-Restore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backup-Restore.aspx.designer.cs">
+      <DependentUpon>Backup-Restore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BitacoraEventos.aspx.cs">
+      <DependentUpon>BitacoraEventos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BitacoraEventos.aspx.designer.cs">
+      <DependentUpon>BitacoraEventos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cambiar-Contraseña.aspx.cs">
+      <DependentUpon>Cambiar-Contraseña.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cambiar-Contraseña.aspx.designer.cs">
+      <DependentUpon>Cambiar-Contraseña.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Capas\BE\BEEvento.cs" />
+    <Compile Include="Capas\BE\BEMascota.cs" />
     <Compile Include="Capas\BE\BEUsuario.cs" />
+    <Compile Include="Capas\BLL\BLLBackupRestore.cs" />
+    <Compile Include="Capas\BLL\BLLEvento.cs" />
+    <Compile Include="Capas\BE\BEDigitoVerificador.cs" />
+    <Compile Include="Capas\BLL\BLLDigitoVerificador.cs" />
+    <Compile Include="Capas\BLL\BLLMascota.cs" />
     <Compile Include="Capas\BLL\BLLUsuario.cs" />
     <Compile Include="Capas\DAL\DALAbstracta.cs" />
+    <Compile Include="Capas\DAL\DALBackupRestore.cs" />
+    <Compile Include="Capas\DAL\DALEvento.cs" />
+    <Compile Include="Capas\DAL\DALDigitoVerificador.cs" />
+    <Compile Include="Capas\DAL\DALMascota.cs" />
     <Compile Include="Capas\DAL\DALUsuario.cs" />
     <Compile Include="Capas\Servicios\Encriptacion.cs" />
     <Compile Include="Capas\Servicios\SessionManager.cs" />
@@ -87,6 +139,20 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion-Usuarios.aspx.cs">
+      <DependentUpon>Gestion-Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gestion-Usuarios.aspx.designer.cs">
+      <DependentUpon>Gestion-Usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DV_Form.aspx.cs">
+      <DependentUpon>DV_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DV_Form.aspx.designer.cs">
+      <DependentUpon>DV_Form.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -99,6 +165,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrarMascotas.aspx.cs">
+      <DependentUpon>RegistrarMascotas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarMascotas.aspx.designer.cs">
+      <DependentUpon>RegistrarMascotas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registrarse.aspx.cs">
       <DependentUpon>Registrarse.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -127,6 +200,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="TempBackups\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
